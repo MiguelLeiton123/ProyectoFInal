@@ -36,6 +36,7 @@ git clone https://github.com/tuusuario/gamecraft-hub.git
 2. Abre el archivo index.html en tu navegador.
 
 Funcionalidades
+
 Vista de productos:
 
 Los productos se presentan en un formato de lista con información como el nombre, precio, descripción y una imagen.
