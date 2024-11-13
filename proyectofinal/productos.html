@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameCraft Hub - Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>GameCraft Hub - Vista de Productos</h1>
+      <nav>
+        <button onclick="limpiarCarrito()">Cancelar Compra</button>
+        <button id="completar-compra" onclick="completarCompra()">
+          Completar Compra
+        </button>
+        <span id="carrito-icono">🛒</span>
+      </nav>
+    </header>
+    <aside>
+      <section class="filter-container">
+        <div id="filtros">
+          <label for="filter-type">Filtrar por:</label>
+          <select id="filter-type" onchange="actualizarOpcionesFiltro()">
+            <option value="categoria">Categoría</option>
+            <option value="marca">Marca</option>
+            <option value="precio">Precio</option>
+          </select>
+
+          <label for="filter-value">Valor:</label>
+          <select id="filter-value">
+            <!-- Opciones generadas por JavaScript -->
+          </select>
+
+          <button onclick="agregarFiltro()">Aplicar Filtro</button>
+          <button onclick="limpiarFiltros()">Limpiar Filtros</button>
+        </div>
+      </section>
+    </aside>
+    <main>
+      <section id="products-list">
+        <h2>Lista de Productos</h2>
+        <div id="product-container">
+          <!-- Productos cargados dinámicamente -->
+        </div>
+      </section>
+
+      <section id="product-detail">
+        <h2>Detalle del Producto</h2>
+        <div id="detail-content">
+          <!-- Detalles del producto seleccionado -->
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="productos.js"></script>
+  </body>
+</html>

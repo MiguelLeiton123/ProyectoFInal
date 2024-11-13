@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameCraft Hub - Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>GameCraft Hub - Carrito de Compras</h1>
+    </header>
+    <section id="resumen-compra">
+      <h3>Resumen de Compra</h3>
+      <p id="total-productos"></p>
+      <p id="total-compra"></p>
+      <p id="cargo-domicilio"></p>
+    </section>
+    <nav>
+      <button onclick="location.href='productos.html'">
+        Continuar Comprando
+      </button>
+      <button onclick="location.href='index.html'">Cancelar Compra</button>
+    </nav>
+
+    <main>
+      <section id="compra-actual">
+        <h2>Carrito de Compras</h2>
+        <table id="carrito-tabla">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="tarjeta-credito">
+        <h3>Tarjeta de Crédito</h3>
+        <form id="tarjeta-formulario">
+          <!-- Número de tarjeta -->
+          <label for="numero-tarjeta">Número de tarjeta:</label>
+          <input
+            type="text"
+            id="numero-tarjeta"
+            name="numero-tarjeta"
+            placeholder="XXXX XXXX XXXX XXXX"
+            maxlength="19"
+            required
+          />
+
+          <!-- Fecha de expiración -->
+          <label for="fecha-expiracion">Fecha de expiración (MM/AA):</label>
+          <input
+            type="text"
+            id="fecha-expiracion"
+            name="fecha-expiracion"
+            placeholder="MM/AA"
+            maxlength="4"
+            required
+          />
+
+          <!-- Código de seguridad -->
+          <label for="codigo-seguridad">Código de seguridad (CVV):</label>
+          <div style="display: flex; align-items: center">
+            <input
+              type="password"
+              id="codigo-seguridad"
+              name="codigo-seguridad"
+              maxlength="3"
+              placeholder="***"
+              required
+            />
+            <button type="button" onclick="toggleCVV()">Mostrar</button>
+          </div>
+
+          <!-- Nombre del titular -->
+          <label for="nombre-titular">Nombre del titular:</label>
+          <input
+            type="text"
+            id="nombre-titular"
+            name="nombre-titular"
+            placeholder="Nombre Completo"
+            maxlength="50"
+            required
+          />
+
+          <!-- País de emisión -->
+          <label for="pais-emision">País de emisión:</label>
+          <select id="pais-emision" name="pais-emision" required>
+            <option value="colombia">Colombia</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="peru">Perú</option>
+            <option value="mexico">México</option>
+            <option value="brasil">Brasil</option>
+            <option value="eeuu">Estados Unidos</option>
+            <option value="españa">España</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="venezuela">Venezuela</option>
+          </select>
+
+          <!-- Tipo de tarjeta -->
+          <label for="tipo-tarjeta">Tipo de tarjeta:</label>
+          <select id="tipo-tarjeta" name="tipo-tarjeta" required>
+            <option value="mastercard">Mastercard</option>
+            <option value="visa">Visa</option>
+            <option value="prepagada">Prepagada</option>
+          </select>
+
+          <!-- Botones -->
+          <button type="button" onclick="limpiarFormulario()">
+            Limpiar campos
+          </button>
+          <button type="button" onclick="ejecutarCompra()">
+            Ejecutar Compra
+          </button>
+        </form>
+      </section>
+    </main>
+    <script src="carrito.js"></script>
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

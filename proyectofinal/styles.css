@@ -1,0 +1,192 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+tbody {
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+  background-color: #333;
+  color: #f5c518;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Botones de navegación */
+nav {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+nav button {
+  background-color: #f5c518;
+  color: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background-color: #e0a800;
+}
+
+/* Secciones */
+main {
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+}
+
+aside,
+section {
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #f5c518;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulario de compra */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="radio"],
+form button,
+form select {
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+form button {
+  background-color: #f5c518;
+  color: #1e1e1e;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+form button:hover {
+  background-color: #e0a800;
+}
+
+/* Vista de productos */
+#products-list {
+  flex: 3;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+#products-list div {
+  border-bottom: 1px solid #444;
+  padding: 1rem 0;
+}
+
+#product-detail {
+  flex: 2;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+/* Carrito */
+#current-purchase table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#current-purchase th,
+#current-purchase td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+#purchase-summary p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Tarjeta de crédito */
+#credit-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#credit-card input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+#credit-card button {
+  background-color: #f5c518;
+  color: #1e1e1e;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#credit-card button:hover {
+  background-color: #e0a800;
+}
+
+/* Estilo de scroll */
+#products-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+#products-list::-webkit-scrollbar-thumb {
+  background-color: #f5c518;
+  border-radius: 10px;
+}
+
+#products-list::-webkit-scrollbar-track {
+  background-color: #2b2b2b;
+}
